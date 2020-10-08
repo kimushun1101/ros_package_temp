@@ -5,21 +5,24 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
+// if you add #include someone.hpp, 
+// edit <depend> in package.xml
+// and find_package in CMakeLists.txt
 
 using namespace std::chrono_literals;
 using std::placeholders::_1;
 
-class MinimalPublisher : public rclcpp::Node
+class MinimalPubSub : public rclcpp::Node
 {
 public:
-  MinimalPublisher()
-  : Node("minimal_publisher"), count_(0)
+  MinimalPubSub()
+  : Node("minimal_pubsub"), count_(0)
   {
     publisher_ = this->create_publisher<std_msgs::msg::String>("topic", 10);
     subscription_ = this->create_subscription<std_msgs::msg::String>(
-      "topic", 10, std::bind(&MinimalPublisher::topic_callback, this, _1));
+      "topic", 10, std::bind(&MinimalPubSub::topic_callback, this, _1));
     timer_ = this->create_wall_timer(
-      500ms, std::bind(&MinimalPublisher::timer_callback, this));
+      500ms, std::bind(&MinimalPubSub::timer_callback, this));
   }
 
 private:
@@ -45,7 +48,7 @@ private:
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<MinimalPublisher>());
+  rclcpp::spin(std::make_shared<MinimalPubSub>());
   rclcpp::shutdown();
   return 0;
 }
