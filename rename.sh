@@ -6,7 +6,7 @@ CPP_FILE_NAME='file_name'
 EXECUTABLE_NAME='executable_name'
 
 sed -i 's/file_name/'${CPP_FILE_NAME}'/g' CMakeLists.txt
-mv src/pubsub_temp.cpp src/${PACKAGE_NAME}.cpp
+mv src/pubsub_temp.cpp src/${CPP_FILE_NAME}.cpp
 
 sed -i 's/executable_name/'${EXECUTABLE_NAME}'/g' CMakeLists.txt
 
