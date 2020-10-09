@@ -14,7 +14,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 
-add_executable_name(executable_name src/pubsub_temp.cpp)
+add_executable(executable_name src/pubsub_temp.cpp)
 ament_target_dependencies(executable_name rclcpp std_msgs)
 
 install(TARGETS
