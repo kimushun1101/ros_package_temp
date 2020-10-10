@@ -13,4 +13,6 @@ sed -i 's/talker_listner/'${EXECUTABLE_NAME}'/g' ../CMakeLists.txt
 sed -i 's/ros_package_temp/'${PACKAGE_NAME}'/g' ../package.xml
 sed -i 's/ros_package_temp/'${PACKAGE_NAME}'/g' ../CMakeLists.txt
 sed -i 's/ros_package_temp/'${PACKAGE_NAME}'/g' ../build.sh
+sed -i 's/package_name/'${PACKAGE_NAME}'/g' rename.sh
+mv ../include/ros_package_temp ../../${PACKAGE_NAME}
 mv ../../ros_package_temp ../../${PACKAGE_NAME}
