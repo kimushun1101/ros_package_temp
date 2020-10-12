@@ -6,8 +6,9 @@
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 // if you add #include someone.hpp, 
-// edit <depend> in package.xml
-// and find_package in CMakeLists.txt
+// edit <depend> in package.xml,
+// find_package and ament_target_dependencies
+// in CMakeLists.txt.
 
 using namespace std::chrono_literals;
 using std::placeholders::_1;
