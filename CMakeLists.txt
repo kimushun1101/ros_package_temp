@@ -14,11 +14,11 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 
-add_executable(talker_listner src/pubsub_temp.cpp)
-ament_target_dependencies(talker_listner rclcpp std_msgs)
+add_executable(talker_listener src/pubsub_temp.cpp)
+ament_target_dependencies(talker_listener rclcpp std_msgs)
 
 install(TARGETS
-  talker_listner
+  talker_listener
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
