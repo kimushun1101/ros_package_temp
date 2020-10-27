@@ -15,7 +15,7 @@ sed -i 's/ros_package_temp/'${PACKAGE_NAME}'/g' ../package.xml
 sed -i 's/ros_package_temp/'${PACKAGE_NAME}'/g' ../CMakeLists.txt
 sed -i 's/ros_package_temp/'${PACKAGE_NAME}'/g' ../build.sh
 sed -i 's/ros_package_temp/'${PACKAGE_NAME}'/g' ../run.sh
-sed -i 's/package_name/'${PACKAGE_NAME}'/g' reset.sh
+sed -i 's/package_name/'${PACKAGE_NAME}'/g' ./reset.sh
 
 DIR='../include/ros_package_temp'
 if [ -d $DIR ];then
