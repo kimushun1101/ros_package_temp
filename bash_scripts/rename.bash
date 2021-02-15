@@ -21,5 +21,3 @@ DIR='../include/ros_package_temp'
 if [ -d $DIR ];then
   mv $DIR ../../${PACKAGE_NAME}
 fi
-
-mv ../../ros_package_temp ../../${PACKAGE_NAME}
