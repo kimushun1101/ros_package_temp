@@ -10,4 +10,3 @@ if [ -d $DIR ];then
   mv $DIR ../include/ros_package_temp
 fi
 
-mv ../../package_name ../../ros_package_temp
